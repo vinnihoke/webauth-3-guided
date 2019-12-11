@@ -8,7 +8,8 @@ const Users = require('../users/users-model.js');
 const generateToken = (user) => {
   const payload = {
     subject: user.id,
-    username: user.username
+    username: user.username,
+    roles: [ "Admin" ]
     // ... anything else you'd like. Keep it simple, only show info that is safe for public viewing
   }
   const options = {
